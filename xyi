@@ -1,0 +1,378 @@
+#1,7,10,14
+s=150
+n=0
+while(s+n)<300:
+	s=s-5
+	n=n+25
+print(s)
+#2
+n=4
+count=0
+minimum=1
+for i in range(1,n+1):
+     x=int(input())
+     if x%3!=0:
+          count+=1
+          if x<minimum:
+              minimum=1
+if count>0:
+     print(count)
+     print(minimum)
+else:
+     print('NO')
+#3,5
+s=int(input())
+A=int(input())
+if(s>10) or (s>A):
+     print('YES')
+else:
+     print('NO')
+#4,6,12
+data = [i for i in range(0, 100) if i % 6 == 0 and i%10 == 2]
+print(data)
+print(len(data))
+#8
+N = int(input())
+minDigit = N % 10
+while N > 0:
+    digit = N % 10
+    if digit % 2 == 0:
+        if digit < minDigit:
+             minDigit = digit
+    N = N // 10
+if minDigit == 0:
+    print("NO")
+#11
+i = 6
+b = int(input())
+
+y = i + 2
+t = y * b
+p = t + 2
+print(p)
+#13
+print(bin(10)) #0b
+print(oct(10)) #0o
+print(hex(10)) #0xa
+
+
+print(int('10011011',2))
+print(int('10011111',2))
+#16
+i=float(input("Введите число в цельсиях: "))
+float=a=i*33.8
+print("Градусов по Фаренгейту")
+print(a)
+#17
+a=int(input("Введите 1 число:"))
+b=int(input("Введите 2 число:"))
+c=int(input("Введите 3 число:"))
+f=(a+b+c)
+g=(a*b*c)
+print(f)
+print(g)
+#18
+print("Введите номер элемента (3, 25, 80, 17)")
+
+i = int(input("Введите номер элемента: "))
+
+if i == 3:
+	print("Литий")
+if i == 25:
+	print("Марганец")
+if i == 80:
+	print("Ртуть")
+if i == 17:
+	print("Хлор")
+if i != 3 or 25 or 80 or 17:
+	print("Вы ввели нето число")
+#19
+print("Екатеринбург код = 343")
+print("Омск код = 381")
+print("Воронеж код = 473")
+print("Ярославль код = 485")
+
+i = int(input("Введите код города: "))
+time1 = int(input("Введите время рашговора в минутах: "))
+
+city343 = 15 
+city381 = 18
+city473 = 13
+city485 = 11
+
+if i == 343:
+	x = city343 * time1
+	print(x, " - руб")
+if i == 381:
+	x = city381 * time1
+	print(x, " - руб")
+if i == 473:
+	x = city473 * time1
+	print(x, " - руб")
+if i == 485:
+	x = city485 * time1
+	print(x, " - руб")
+#20
+a = int(input("Введите а: "))
+b = int(input("Введите b: "))
+c = int(input("Введите c: "))
+
+p = (a + b +c) / 2
+s = p*(p-a)*(p-b)*(p-c)
+x = s ** (0.5)
+print("Полупириметер равен: ", p) 
+print("Площадь ровна: ",x)
+#21
+import random
+
+c = random.randint(1,10)
+print("Попробуйте угадать число !")
+
+i = int(input("Введите число от 1 до 10: "))
+if i == c:
+	print("Победа")
+if i != c:
+	print("Не угадали")
+#22
+s=input("введите слово: ")
+n=int(input("введите число: "))
+if len(s)>n:
+    print(s.upper())
+else:
+    print(s)
+#23
+s = str(input("Введите текст: "))
+n = int(input("Введите число: "))
+
+i = len(s)
+
+if i > n:
+	print(s)
+if i < n:
+	print(s.upper())
+#24
+while True:
+	print("САМОВА?")
+	i = str(input("Введите недостоющкю букву: "))
+	if i == "р":
+		print("Победа!")
+		print("слово: САМОВАР")
+		print("|||||||||||||||||||||||||||||")
+	else:
+		print("Ответ не верен")
+		print("слово: САМОВАР")
+		print("|||||||||||||||||||||||||||||")
+		print("Л?ТО")
+		p = str(input("Введите недостоющкю букву: "))
+		if p == "е":
+			print("Победа")
+			print("слово САМАРА")
+			print("|||||||||||||||||||||||||||||")
+		else:
+			print("Ответ не верен")	
+			print("слово САМАРА")
+			print("|||||||||||||||||||||||||||||")
+			print("СО?НЦЕ")
+			u = str(input("Введите недостоющкю букву: "))
+			if u == "л":
+				print("Победа")
+				print("слово СОЛНЦЕ")
+				print("|||||||||||||||||||||||||||||")
+			else:
+				print("Ответ не верен")	
+				print("слово СОЛНЦЕ")	
+				print("|||||||||||||||||||||||||||||")
+
+#25
+import math
+
+i = input("Введите числа через пробел для нахождения суммы: ")
+o = 1
+
+while type(i) != int:
+    print(sum(map(int, i.split())))
+    i = input("Введите числа через пробел для нахождения суммы: ")
+    try :
+        i = int(i)
+
+    except ValueError:
+        print("Вы ввели не число!")
+        i = input("Введите числа через пробел для нахождения суммы: ")
+#26
+import tkinter
+def click(): 
+    try:
+        res=((float(entry.get())*1.8)+32)
+        label.config(text=res)
+    except:
+        label.config(text='Ошибка ввода!!!')
+window = tkinter.Tk()
+frame = tkinter.Frame(window)
+frame.pack()
+lbl=tkinter.Label(frame, text='Температура в цельциях', font=("Arial Bold", 15))
+lbl.pack()
+entry = tkinter.Entry(frame, width=20)
+entry.pack()
+entry.focus()
+label = tkinter.Label(frame)
+label.pack()
+button1 = tkinter.Button(frame, text='Конвертировать!', command=click)
+button1.pack()
+button2 = tkinter.Button(frame, text='Выход',command=window.destroy)
+button2.pack()
+window.mainloop()
+#27
+import tkinter
+import random
+from tkinter import messagebox
+import os
+import sys
+ 
+d={'car':'машина', 'helicopter':'верталёт', 'plane':'самолёт', 'bus':'автобус', 'train':'поезд'}
+window = tkinter.Tk()
+window.geometry('300x200')
+window.title('Dictionary')
+lbl1=tkinter.Label(window, text='Напишите русское слово:', font=("Arial Bold", 15))
+lbl2=tkinter.Label(window)
+lbl3=tkinter.Label(window)
+lbl4=tkinter.Label(window)
+ 
+# функция выбора случайного слова из словаря
+def random_word():
+    word=random.choice(list(d.keys()))
+    lbl2.configure(text=word)
+    lbl3.configure(text='')
+    return word
+random_word()
+ 
+lbl1.pack()
+lbl2.pack()
+txt = tkinter.Entry(window, width=10)
+txt.focus()
+txt.pack()
+lbl3.pack()
+lbl4.pack()
+ 
+# функция рестарта программы
+def restart_program():
+    python = sys.executable
+    os.execl(python, python, * sys.argv)
+ 
+# функция проверки ввода
+def click():
+    a=txt.get()
+    if d[lbl2.cget('text')]==a:
+        result='ты прав.'
+    else:
+        result='ты не прав.'
+        click.invocations-=1
+        lbl4.configure(text=f'Осталось попыток: {click.invocations}.')
+        if click.invocations==0:
+            result='You lost.'
+            msg=messagebox.showinfo(title="Ты проиграл!", message="рестарт")
+            if msg=='ok':
+                restart_program() # при трех ошибках возникает сообщение о том, Вы проиграли и что игра начнется заново.
+    lbl3.configure(text=result)
+click.invocations=3 #обратный счетчик ошибок
+ 
+btn1 = tkinter.Button(window, text="проверить", command=click)
+btn1.pack()
+btn2 = tkinter.Button(window, text="следующее", command=random_word)
+btn2.pack()
+window.mainloop()
+
+#28
+from tkinter import *
+ 
+ 
+class Main(Frame):
+    def __init__(self, root):
+        super(Main, self).__init__(root)
+        self.build()
+ 
+    def build(self):
+        self.formula = "0"
+        self.lbl = Label(text=self.formula, font=("Times New Roman", 21, "bold"), bg="#000", foreground="#FFF")
+        self.lbl.place(x=11, y=50)
+ 
+        btns = [
+            "C", "DEL", "*", "=",
+            "1", "2", "3", "/",
+            "4", "5", "6", "+",
+            "7", "8", "9", "-",
+            "(", "0", ")", "X^2"
+        ]
+ 
+        x = 10
+        y = 140
+        for bt in btns:
+            com = lambda x=bt: self.logicalc(x)
+            Button(text=bt, bg="#FFF",
+                   font=("Times New Roman", 15),
+                   command=com).place(x=x, y=y,
+                                      width=115,
+                                      height=79)
+            x += 117
+            if x > 400:
+                x = 10
+                y += 81
+ 
+    def logicalc(self, operation):
+        if operation == "C":
+            self.formula = ""
+        elif operation == "DEL":
+            self.formula = self.formula[0:-1]
+        elif operation == "X^2":
+            self.formula = str((eval(self.formula))**2)
+        elif operation == "=":
+            self.formula = str(eval(self.formula))
+        else:
+            if self.formula == "0":
+                self.formula = ""
+            self.formula += operation
+        self.update()
+ 
+    def update(self):
+        if self.formula == "":
+            self.formula = "0"
+        self.lbl.configure(text=self.formula)
+ 
+ 
+if __name__ == '__main__':
+    root = Tk()
+    root["bg"] = "#000"
+    root.geometry("485x550+200+200")
+    root.title("Калькулятор")
+    root.resizable(False, False)
+    app = Main(root)
+    app.pack()
+    root.mainloop()
+#29
+i = str(input("Введите строку: "))
+
+z = len(i)
+
+print(i.upper())
+
+if z == 0:
+	print("Строка пуста")
+
+#30
+print("прямоугольник, круг, треугольник")
+i = str(input("Площадь чего найти: "))
+
+
+if i == 'треугольник':
+	h = int(input("высота: "))
+	a = int(input("сторона а: "))
+	tr = h * a * 0.5
+	print(tr)
+if i == 'прямоугольник':
+	A = int(input("Первая сторона: "))
+	b = int(input("Вторая сторона: "))
+	pr = A *b
+	print(pr)
+if i == 'круг':
+	r = int(input("Радиус: "))
+	krug = r**2*3.14
+	print(krug)
